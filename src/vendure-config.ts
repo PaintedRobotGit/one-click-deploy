@@ -7,6 +7,7 @@ import {
 import { defaultEmailHandlers, EmailPlugin } from '@vendure/email-plugin';
 import { AssetServerPlugin, configureS3AssetStorage } from '@vendure/asset-server-plugin';
 import { AdminUiPlugin } from '@vendure/admin-ui-plugin';
+import { MigrationV2Plugin } from '@vendure/migrate-v2';
 import 'dotenv/config';
 import path from 'path';
 
@@ -114,5 +115,6 @@ export const config: VendureConfig = {
             route: 'admin',
             port: 3002,
         }),
+        MigrationV2Plugin,
     ],
 };
