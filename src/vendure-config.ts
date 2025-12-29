@@ -68,7 +68,7 @@ export const config: VendureConfig = {
     customFields: {
         Product: [
             {name: 'test',type: 'string'},
-            {name: 'Company ID', type: 'string'},
+            {name: 'company_id', type: 'string'},
         ],
     },
     plugins: [
