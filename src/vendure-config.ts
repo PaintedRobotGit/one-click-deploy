@@ -66,10 +66,10 @@ export const config: VendureConfig = {
     // When adding or altering custom field definitions, the database will
     // need to be updated. See the "Migrations" section in README.md.
     customFields: {
-        Product: [{
-            name: 'test',
-            type: 'string',
-        }]
+        Product: [
+            {name: 'test',type: 'string'},
+            {name: 'Company ID', type: 'string'},
+        ],
     },
     plugins: [
         AssetServerPlugin.init({
