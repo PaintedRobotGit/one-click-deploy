@@ -69,7 +69,10 @@ export const config: VendureConfig = {
         Product: [
             {name: 'test',type: 'string'},
             {name: 'company_id', type: 'string'},
-            {name: 'sale_price', type: 'float'},
+        ],
+        ProductVariant: [
+            {name: 'original_price', type: 'float'},
+            {name: 'sale_percentage', type: 'int'},
         ],
     },
     plugins: [
