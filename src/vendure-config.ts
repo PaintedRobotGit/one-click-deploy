@@ -8,6 +8,7 @@ import { defaultEmailHandlers, EmailPlugin } from '@vendure/email-plugin';
 import { AssetServerPlugin, configureS3AssetStorage } from '@vendure/asset-server-plugin';
 import { AdminUiPlugin } from '@vendure/admin-ui-plugin';
 import { MigrationV2Plugin } from '@vendure/migrate-v2';
+import { StripePlugin } from '@vendure/payments-plugin/package/stripe';
 import 'dotenv/config';
 import path from 'path';
 
@@ -76,6 +77,10 @@ export const config: VendureConfig = {
         ],
     },
     plugins: [
+        StripePlugin.init({
+            // This prevents different customers from using the same PaymentIntent
+            storeCustomersInStripe: true,
+        }),
         AssetServerPlugin.init({
             route: 'assets',
             assetUploadDir: process.env.ASSET_UPLOAD_DIR || path.join(__dirname, '../static/assets'),

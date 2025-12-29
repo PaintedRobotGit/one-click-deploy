@@ -21,6 +21,7 @@
     "@vendure/create": "^2.2.0",
     "@vendure/email-plugin": "^2.2.0",
     "@vendure/migrate-v2": "^0.4.0",
+    "@vendure/payments-plugin": "^3.5.2",
     "dotenv": "16.3.1",
     "pg": "8.11.5",
     "typescript": "5.3.3"
